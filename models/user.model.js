@@ -11,5 +11,6 @@ const userSchema = new mongoose.Schema({
     following : [{type : mongoose.Schema.Types.ObjectId, ref:'USer'}],
     posts : [{type : mongoose.Schema.Types.ObjectId, ref : 'Post'}],
     bookmark : [{type : mongoose.Schema.Types.ObjectId, ref : 'Post'}]
+},{timestamps: true})
 
-})
+export const User = mongoose.model('User',userSchema);
